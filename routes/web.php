@@ -1,6 +1,6 @@
 <?php
 
-/** @var \Laravel\Lumen\Routing\Router $router */
+/** @var Router $router */
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +13,16 @@
 |
 */
 
+use Laravel\Lumen\Routing\Router;
+
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
 $router->post('login', 'AuthController@login');
-$router->post('logout', 'AuthController@logout');
-$router->post('refresh', 'AuthController@refresh');
-$router->post('me', 'AuthController@me');
+
+$router->group(['middleware' => 'auth'], function () use ($router) {
+    $router->post('logout', 'AuthController@logout');
+    $router->post('refresh', 'AuthController@refresh');
+    $router->post('me', 'AuthController@me');
+});

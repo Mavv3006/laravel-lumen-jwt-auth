@@ -7,16 +7,6 @@ use Illuminate\Http\JsonResponse;
 class AuthController extends Controller
 {
     /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
-    {
-        $this->middleware('auth:api', ['except' => ['login']]);
-    }
-
-    /**
      * @return JsonResponse
      */
     public function login(): JsonResponse

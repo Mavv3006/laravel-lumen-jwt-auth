@@ -29,3 +29,10 @@ security vulnerabilities will be promptly addressed.
 The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 https://sameermistry2502.medium.com/laravel-lumen-with-jwt-authentication-26611cce34c0
+
+# Install
+Run the following commands:
+
+- composer install 
+- php artisan jwt:secret
+- 
