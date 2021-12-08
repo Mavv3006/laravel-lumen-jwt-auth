@@ -35,4 +35,7 @@ Run the following commands:
 
 - composer install 
 - php artisan jwt:secret
-- 
+
+# Guides
+- https://iwader.co.uk/post/tymon-jwt-auth-with-lumen-5-2
+- https://www.jetbrains.com/help/phpstorm/http-client-in-product-code-editor.html#creating-http-request-files

@@ -21,7 +21,7 @@ $router->get('/', function () use ($router) {
 
 $router->post('login', 'AuthController@login');
 
-$router->group(['middleware' => 'auth'], function () use ($router) {
+$router->group(['middleware' => 'auth:api'], function () use ($router) {
     $router->post('logout', 'AuthController@logout');
     $router->post('refresh', 'AuthController@refresh');
     $router->post('me', 'AuthController@me');
